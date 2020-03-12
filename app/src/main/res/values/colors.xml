@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="LoginButton">#3B48EE</color>
     <color name="BackgroundAccount">#3B49EE</color>
+    <color name="PaymentColor">#A8B4C4</color>
+    <color name="BillsColor">#485465</color>
 </resources>
