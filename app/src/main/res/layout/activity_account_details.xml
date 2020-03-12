@@ -1,9 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="250dp"
+    android:background="@color/BackgroundAccount"
     tools:context=".activity.AccountDetailActivity">
 
-</LinearLayout>
+    <ImageView
+        android:layout_marginTop="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:tint="@android:color/white"
+        android:id="@+id/ibBack"
+        android:layout_gravity="right"
+        android:src="@drawable/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/ibBack"
+        android:id="@+id/tvName"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="8dp"
+        android:text="Jose Da silva Teste"
+        android:textSize="32dp" />
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/tvName"
+        android:paddingLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAccount"
+        android:text="Conta"
+        android:textSize="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/tvAccount"
+        android:paddingLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvaccountNumber"
+        android:textSize="32dp"
+        android:text="2050 / 0.1"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/tvaccountNumber"
+        android:paddingLeft="8dp"
+        android:id="@+id/tvBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16dp"
+        android:text="Saldo" />
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/tvBalance"
+        android:paddingLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32dp"
+        android:text="R$ 1.000"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp" />
+
+</RelativeLayout>

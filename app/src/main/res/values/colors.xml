@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="LoginButton">#3B48EE</color>
+    <color name="BackgroundAccount">#3B49EE</color>
 </resources>
