@@ -1,10 +1,12 @@
-package br.com.tgob.testeandroid;
+package br.com.tgob.testeandroid.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class AccountDetails extends AppCompatActivity {
+import br.com.tgob.testeandroid.R;
+
+public class AccountDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
