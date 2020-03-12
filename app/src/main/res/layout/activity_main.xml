@@ -12,24 +12,26 @@
         android:id="@+id/ivLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/Logo"
+        android:src="@drawable/logo"
         android:layout_marginTop="64dp"
         android:layout_gravity="center_horizontal"/>
 
     <EditText
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/layout_bg"
         android:layout_marginTop="32dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="User"/>
 
     <EditText
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/layout_bg"
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="Password"/>
 
     <Button
@@ -37,6 +39,7 @@
         android:layout_height="62dp"
         android:layout_marginTop="324dp"
         android:backgroundTint="@color/LoginButton"
+        android:textColor="@android:color/white"
         android:layout_gravity="bottom|center_horizontal"
         android:text="@string/login" />
 
