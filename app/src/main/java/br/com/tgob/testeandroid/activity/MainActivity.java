@@ -28,6 +28,7 @@
                     @Override
                     public void onClick(View view) {
 
+                        //validate if the user or password are different from the function.
                         if(!validator.validatePassword(password.getText().toString().trim()) || !validator.isValidEmail(user.getText().toString().trim())) {
                             Toast.makeText(MainActivity.this, "Password or User Invalid", Toast.LENGTH_LONG).show();
                         }else {
