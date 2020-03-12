@@ -17,6 +17,7 @@
         android:layout_gravity="center_horizontal"/>
 
     <EditText
+        android:id="@+id/edtUser"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/layout_bg"
@@ -26,15 +27,18 @@
         android:hint="User"/>
 
     <EditText
+        android:id="@+id/edtPassword"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/layout_bg"
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:inputType="textPassword"
         android:hint="Password"/>
 
     <Button
+        android:id="@+id/btnLogin"
         android:layout_width="202dp"
         android:layout_height="62dp"
         android:layout_marginTop="324dp"
