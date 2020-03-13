@@ -20,7 +20,7 @@ public class UserAccount {
     private String agency;
     @SerializedName("balance")
     @Expose
-    private Double balance;
+    private String balance;
 
     public Integer getUserId() {
         return userId;
@@ -65,11 +65,9 @@ public class UserAccount {
         this.agency = agency;
     }
 
-    public Double getBalance() {
-        return balance;
-    }
+    public String getBalance() { return balance; }
 
-    public void setBalance(Double balance) {
+    public void setBalance(String balance) {
         this.balance = balance;
     }
 

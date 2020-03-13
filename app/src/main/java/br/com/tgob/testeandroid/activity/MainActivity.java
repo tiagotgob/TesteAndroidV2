@@ -60,12 +60,13 @@
                                         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
                                         SharedPreferences.Editor editor = pref.edit();
 
-                                        editor.putString("name", login.getUserAccount().getBankAccount().trim());
-                                        editor.putString("bankAccount", login.getUserAccount().getName().trim());
+                                        editor.putString("name", login.getUserAccount().getName().trim());
+                                        editor.putString("bankAccount", login.getUserAccount().getBankAccount().trim());
                                         editor.putString("agency", login.getUserAccount().getAgency().trim());
-                                        editor.putString("balance", login.getUserAccount().getBalance().toString().trim());
+                                        editor.putString("balance", login.getUserAccount().getBalance()).toString();
+                                        editor.putInt("userId", login.getUserAccount().getUserId());
 
-                                        editor.commit();
+                                        editor.apply();
                                     }
                                 }
 
