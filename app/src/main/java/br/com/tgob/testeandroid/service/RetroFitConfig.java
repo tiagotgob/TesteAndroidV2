@@ -13,4 +13,8 @@ public class RetroFitConfig {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
+
+    public BankService getBankService() {
+        return this.retrofit.create(BankService.class);
+    }
 }

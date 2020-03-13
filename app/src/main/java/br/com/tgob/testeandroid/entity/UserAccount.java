@@ -26,6 +26,17 @@ public class UserAccount {
         return userId;
     }
 
+    @Override
+    public String toString() {
+        return "UserAccount{" +
+                "userId=" + userId +
+                ", name='" + name + '\'' +
+                ", bankAccount='" + bankAccount + '\'' +
+                ", agency='" + agency + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
+
     public void setUserId(Integer userId) {
         this.userId = userId;
     }

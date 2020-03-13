@@ -10,6 +10,15 @@ public class UserData {
     @SerializedName("statementList")
     @Expose
     private List<StatementList> statementList = null;
+
+    @Override
+    public String toString() {
+        return "UserData{" +
+                "statementList=" + statementList +
+                ", error=" + error +
+                '}';
+    }
+
     @SerializedName("error")
     @Expose
     private Error error;

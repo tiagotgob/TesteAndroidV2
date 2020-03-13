@@ -4,6 +4,8 @@ package br.com.tgob.testeandroid.entity;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+
 public class StatementList {
 
     @SerializedName("title")
@@ -15,6 +17,17 @@ public class StatementList {
     @SerializedName("date")
     @Expose
     private String date;
+
+    @Override
+    public String toString() {
+        return "StatementList{" +
+                "title='" + title + '\'' +
+                ", desc='" + desc + '\'' +
+                ", date='" + date + '\'' +
+                ", value=" + value +
+                '}';
+    }
+
     @SerializedName("value")
     @Expose
     private Double value;

@@ -17,6 +17,14 @@ public class Login {
         return userAccount;
     }
 
+    @Override
+    public String toString() {
+        return "Login{" +
+                "userAccount=" + userAccount +
+                ", error=" + error +
+                '}';
+    }
+
     public void setUserAccount(UserAccount userAccount) {
         this.userAccount = userAccount;
     }
