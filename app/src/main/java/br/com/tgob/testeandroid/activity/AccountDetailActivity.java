@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.Locale;
 
 import br.com.tgob.testeandroid.R;
 import br.com.tgob.testeandroid.adapter.UserDetailAdapter;
@@ -55,9 +56,12 @@ public class AccountDetailActivity extends AppCompatActivity {
         bankAccount = findViewById(R.id.tvaccountNumber);
         balance = findViewById(R.id.tvUserBalance);
 
-        balance.setText("R$ " + spBalance);
+        double changevalue = Double.valueOf(spBalance);
+        NumberFormat format = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+        balance.setText(format.format(changevalue));
         name.setText(spName);
-        bankAccount.setText(spBankAcccount + " "+ "/ " + spAgency);
+
+        bankAccount.setText(spBankAcccount + " "+ "/ " + spAgency.substring(0,1) + "." + spAgency.substring(2,7) + "-" + spAgency.substring(7, spAgency.length()));
 
         Call<UserData> call = new RetroFitConfig().getBankService().getUserData(userId);
 
