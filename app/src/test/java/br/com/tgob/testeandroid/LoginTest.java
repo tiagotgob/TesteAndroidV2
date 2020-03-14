@@ -2,6 +2,7 @@
 
     import org.junit.Test;
 
+    import br.com.tgob.testeandroid.helper.CpfValidator;
     import br.com.tgob.testeandroid.helper.Validator;
 
     import static org.junit.Assert.*;
@@ -34,5 +35,17 @@
         public void isInvalidEmail(){
             Validator validator = new Validator();
             assertFalse(validator.isValidEmail("tiagomoraesadasdsotmail.com"));
+        }
+
+        @Test
+        public void isValidCpf(){
+            CpfValidator cpfValidator = new CpfValidator();
+            assertTrue(cpfValidator.isCPF("33919227883"));
+        }
+
+        @Test
+        public void isNotValidCpf(){
+            CpfValidator cpfValidator = new CpfValidator();
+            assertFalse(cpfValidator.isCPF("4444444"));
         }
     }

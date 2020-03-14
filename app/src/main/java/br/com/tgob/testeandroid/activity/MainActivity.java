@@ -20,6 +20,7 @@
         import br.com.tgob.testeandroid.entity.Login;
         import br.com.tgob.testeandroid.entity.UserAccount;
         import br.com.tgob.testeandroid.entity.UserData;
+        import br.com.tgob.testeandroid.helper.CpfValidator;
         import br.com.tgob.testeandroid.helper.Validator;
         import br.com.tgob.testeandroid.service.RetroFitConfig;
         import retrofit2.Call;
@@ -33,18 +34,20 @@
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
 
+                Button login = findViewById(R.id.btnLogin);
                 final EditText password = findViewById(R.id.edtPassword);
                 final EditText user = findViewById(R.id.edtUser);
-                Button login = findViewById(R.id.btnLogin);
                 final Validator validator = new Validator();
+                final CpfValidator cpfValidator = new CpfValidator();
+                final String cpf = user.getText().toString().trim();
 
                 login.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
                         //validate if the user or password are different from the function.
-                        if(!validator.validatePassword(password.getText().toString().trim()) || !validator.isValidEmail(user.getText().toString().trim())) {
-                            Toast.makeText(MainActivity.this, "Password or User Invalid", Toast.LENGTH_LONG).show();
+                        if(!validator.validatePassword(password.getText().toString().trim()) && (!cpfValidator.isCPF(cpf) || !validator.isValidEmail(user.getText().toString().trim()))){
+                            Toast.makeText(MainActivity.this, "Password, User or CPF Invalid", Toast.LENGTH_LONG).show();
                         }else {
 
                             Call<Login> call = new RetroFitConfig().getBankService().login(password.getText().toString().trim(), user.getText().toString().trim());
